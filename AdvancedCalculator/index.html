@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <style>
+        *{
+            background-color: whitesmoke;
+        }
+        #FN{
+            width: 90%;
+            height: 50px;
+            border: 1px solid gray;
+            box-shadow: 2px 3px 5px gray;
+            border-radius: 10px;
+            outline: none;
+            font-size: 40px;
+            text-align: center;
+        }
+        .FC{
+            display: flex;
+            margin: 25px;
+            justify-content: center;
+        }
+        .SC{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 10px 5px;
+            justify-items: center;
+        }
+        button{
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            border: 1px solid gray;
+            outline: none;
+            font-size: 20px;
+            transition: all 0.4s;
+        }
+        #ac,#plus,#minus,#multi,#divi,#equal{
+            background-color: orange;
+        }
+        button:hover{
+            background-color: gray;
+            color: white;
+        }
+    </style>
+    <div class="parent">
+        <div class="FC">
+            <input type="text" disabled id="FN">
+        </div>
+        <div class="SC">
+            <button onclick="showData('+')">+</button>
+            <button onclick="showData('-')">-</button>
+            <button onclick="showData('*')">*</button>
+            <button onclick="showData('/')">/</button>
+            <button id="ac" onclick="cac()">AC</button>
+            <button onclick="showData('1')">1</button>
+            <button onclick="showData('2')">2</button>
+            <button onclick="showData('3')">3</button>
+            <button onclick="showData('4')">4</button>
+            <button onclick="showData('5')">5</button>
+            <button onclick="showData('6')">6</button>
+            <button onclick="showData('7')">7</button>
+            <button onclick="showData('8')">8</button>
+            <button onclick="showData('9')">9</button>
+            <button onclick="showData('0')">0</button>
+            <button onclick="showData('.')">.</button>
+            <button id="equal" onclick="calc()">=</button>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.js"
+        integrity="sha512-BbVEDjbqdN3Eow8+empLMrJlxXRj5nEitiCAK5A1pUr66+jLVejo3PmjIaucRnjlB0P9R3rBUs3g5jXc8ti+fQ=="
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.min.js"
+        integrity="sha512-iphNRh6dPbeuPGIrQbCdbBF/qcqadKWLa35YPVfMZMHBSI6PLJh1om2xCTWhpVpmUyb4IvVS9iYnnYMkleVXLA=="
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer">
+    </script>
+    <script src="./app.js"></script>
+</body>
+</html>
